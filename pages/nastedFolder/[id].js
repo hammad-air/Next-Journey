@@ -1,11 +1,12 @@
+import { useRouter } from 'next/router'
 import React from 'react'
 
-const [id] = () => {
-  return (
-    <div>
-      
-    </div>
-  )
+const Post = () => {
+
+const router = useRouter()
+const { pid } = router.query;
+
+  return <p>Post : {pid}</p>
 }
 
-export default [id]
+export default Post;
